@@ -10,8 +10,12 @@ import { RecipesService } from "app/recipes/recipes.service";
 export class RecipesDetailComponent implements OnInit {
   @Input('recipeDetailData') recipeDetail: Recipe;
 
-  constructor() { }
+  constructor(private recipesService: RecipesService) { }
 
   ngOnInit() { }
+
+  onAddToShoppingList() {
+    this.recipesService.addIngredientsToShoppingList(this.recipeDetail.ingredients);
+  }
 
 }

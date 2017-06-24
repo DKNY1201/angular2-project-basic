@@ -12,6 +12,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from 'app/shared/dropdown.directive';
 import { MyTestDirective } from "app/my-test/my-test.directive";
 import { MyTestComponent } from "app/my-test/my-test.component";
+import { ShoppingListService } from "app/shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { MyTestComponent } from "app/my-test/my-test.component";
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

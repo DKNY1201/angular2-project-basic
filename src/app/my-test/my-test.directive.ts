@@ -7,7 +7,6 @@ import { Directive, TemplateRef, ViewContainerRef, Input } from "@angular/core";
 export class MyTestDirective {
     
     @Input() set myTestDirective(condition: boolean) {
-        console.log(condition);
         if (condition) {
             this.vcRef.createEmbeddedView(this.templateRef);
         } else {
