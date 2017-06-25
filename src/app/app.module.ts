@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,10 @@ import { DropdownDirective } from 'app/shared/dropdown.directive';
 import { MyTestDirective } from "app/my-test/my-test.directive";
 import { MyTestComponent } from "app/my-test/my-test.component";
 import { ShoppingListService } from "app/shopping-list/shopping-list.service";
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
+import { NotFoundComponent } from './not-found/not-found.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -26,10 +31,14 @@ import { ShoppingListService } from "app/shopping-list/shopping-list.service";
     ShoppingEditComponent,
     DropdownDirective,
     MyTestDirective,
-    MyTestComponent
+    MyTestComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule
+    FormsModule,
+    HttpModule,
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
