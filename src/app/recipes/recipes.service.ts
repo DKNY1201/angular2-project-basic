@@ -43,4 +43,14 @@ export class RecipesService {
         this.shoppingListService.addIngredients(ingredients);
     }
 
+    getRecipe(name: string) {
+      const recipe = this.recipes.find(
+        (rec) => {
+          return rec.name === name;
+        }
+      )
+
+      return recipe;
+    }
+
 }
