@@ -33,8 +33,6 @@ export class RecipesService {
 
     }
 
-    @Output() recipeSelected = new EventEmitter<Recipe>();
-
     getRecipes() {
         return this.recipes.slice();
     }
@@ -43,14 +41,8 @@ export class RecipesService {
         this.shoppingListService.addIngredients(ingredients);
     }
 
-    getRecipe(name: string) {
-      const recipe = this.recipes.find(
-        (rec) => {
-          return rec.name === name;
-        }
-      )
-
-      return recipe;
+    getRecipe(index: number) {
+      return this.recipes[index];
     }
 
 }
