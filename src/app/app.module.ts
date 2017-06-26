@@ -17,6 +17,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import { NotFoundComponent } from './not-found/not-found.component';
 import {AppRoutingModule} from "./app-routing.module";
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {AppRoutingModule} from "./app-routing.module";
     DropdownDirective,
     MyTestDirective,
     MyTestComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RecipeStartComponent
   ],
   imports: [
     FormsModule,
