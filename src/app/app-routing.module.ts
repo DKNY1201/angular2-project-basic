@@ -7,12 +7,15 @@ import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {RecipesDetailComponent} from "./recipes/recipes-detail/recipes-detail.component";
 import {RecipeStartComponent} from "./recipes/recipe-start/recipe-start.component";
+import {RecipeNewComponent} from "./recipes/recipe-new/recipe-new.component";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
   { path: 'recipes', component: RecipesComponent, children: [
     { path: '', component: RecipeStartComponent},
-    { path: ':id', component: RecipesDetailComponent}
+    { path: 'new', component: RecipeNewComponent},
+    { path: ':id', component: RecipesDetailComponent},
+    { path: ':id/edit', component: RecipeNewComponent}
   ] },
   { path: 'shopping-list', component: ShoppingListComponent},
   { path: 'not-found', component: NotFoundComponent, data: {'message': 'Opps! Page not found!'}},

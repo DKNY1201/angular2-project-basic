@@ -18,6 +18,7 @@ import {HttpModule} from "@angular/http";
 import { NotFoundComponent } from './not-found/not-found.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeNewComponent } from './recipes/recipe-new/recipe-new.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     MyTestDirective,
     MyTestComponent,
     NotFoundComponent,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeNewComponent
   ],
   imports: [
     FormsModule,
