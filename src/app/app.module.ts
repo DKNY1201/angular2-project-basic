@@ -13,10 +13,10 @@ import { DropdownDirective } from 'app/shared/dropdown.directive';
 import { MyTestDirective } from "app/my-test/my-test.directive";
 import { MyTestComponent } from "app/my-test/my-test.component";
 import { ShoppingListService } from "app/shopping-list/shopping-list.service";
-import {FormsModule} from "@angular/forms";
-import {HttpModule} from "@angular/http";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 import { NotFoundComponent } from './not-found/not-found.component';
-import {AppRoutingModule} from "./app-routing.module";
+import { AppRoutingModule } from "./app-routing.module";
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeNewComponent } from './recipes/recipe-new/recipe-new.component';
 
@@ -39,6 +39,7 @@ import { RecipeNewComponent } from './recipes/recipe-new/recipe-new.component';
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     BrowserModule,
     AppRoutingModule

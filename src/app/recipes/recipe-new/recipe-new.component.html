@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <form>
+    <form [formGroup]="recipeForm">
       <div class="row">
         <div class="col-xs-12">
           <button
@@ -16,7 +16,9 @@
             <input
               type="text"
               id="name"
-              class="form-control">
+              class="form-control"
+              formControlName="name"
+            >
           </div>
         </div>
       </div>
@@ -28,6 +30,7 @@
               type="text"
               id="imagePath"
               class="form-control"
+              formControlName="imagepath"
               >
           </div>
         </div>
@@ -45,7 +48,9 @@
               type="text"
               id="description"
               class="form-control"
-              rows="6"></textarea>
+              rows="6"
+              formControlName="description"
+            ></textarea>
           </div>
         </div>
       </div>
