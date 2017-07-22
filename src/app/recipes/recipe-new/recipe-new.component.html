@@ -31,13 +31,14 @@
               id="imagePath"
               class="form-control"
               formControlName="imagePath"
+              #recipePath
               >
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <img class="img-responsive">
+          <img [src]= "recipePath.value" class="img-responsive">
         </div>
       </div>
       <div class="row">
@@ -80,6 +81,7 @@
               <button
                 type="button"
                 class="btn btn-danger"
+                (click)="onDeleteIngredient(i)"
                 >X</button>
             </div>
           </div>

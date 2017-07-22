@@ -19,6 +19,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeNewComponent } from './recipes/recipe-new/recipe-new.component';
+import {RecipesService} from "./recipes/recipes.service";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { RecipeNewComponent } from './recipes/recipe-new/recipe-new.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService, RecipesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
