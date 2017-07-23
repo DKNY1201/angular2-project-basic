@@ -4,6 +4,7 @@ import { Recipe } from "app/recipes/recipe.model";
 import { Ingredient } from "app/shared/ingredient.model";
 import { ShoppingListService } from "app/shopping-list/shopping-list.service";
 import { Subject } from "rxjs/Subject";
+import {DataStorageService} from "../shared/data-storage.service";
 
 @Injectable()
 export class RecipesService {
@@ -32,9 +33,7 @@ export class RecipesService {
         )
     ];
 
-    constructor(private shoppingListService: ShoppingListService) {
-
-    }
+    constructor(private shoppingListService: ShoppingListService) {}
 
     getRecipes() {
         return this.recipes.slice();
@@ -53,6 +52,10 @@ export class RecipesService {
       this.recipeChange.next(this.recipes.slice());
     }
 
+    setRecipes(recipes: Recipe[]) {
+      this.recipes = recipes;
+    }
+
     updateRecipe(index: number, recipe: Recipe) {
       this.recipes[index] = recipe;
       this.recipeChange.next(this.recipes.slice());
@@ -62,4 +65,5 @@ export class RecipesService {
       this.recipes.splice(index, 1);
       this.recipeChange.next(this.recipes.slice());
     }
+
 }
