@@ -20,14 +20,7 @@ export class HeaderComponent {
   }
 
   onFetchData() {
-    this.dataStorageService.getRecipe().subscribe(response => {
-      console.log(response);
-      // this.recipesService.setRecipes(response)
-      this.recipesService.recipeChange.next(response);
-    },
-        error => console.log(error)
-
-    );
+    this.dataStorageService.getRecipe();
   }
 
 }
