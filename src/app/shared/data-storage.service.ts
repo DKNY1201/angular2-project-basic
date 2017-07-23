@@ -13,9 +13,20 @@ export class DataStorageService {
   }
 
   getRecipe() {
-    return this.http.get('https://recipe-book-8811d.firebaseio.com/recipesdata.json').subscribe((response: Response) => {
-      const recipes: Recipe[] = response.json();
-      this.recipesService.setRecipes(recipes);
-    });
+    return this.http.get('https://recipe-book-8811d.firebaseio.com/recipesdata.json')
+      .map((response: Response) => {
+        const recipes: Recipe[] = response.json();
+        for (let recipe of recipes) {
+          if (!recipe['ingredients']) {
+            recipe['ingredients'] = [];
+            console.log(recipe);
+          }
+        }
+        return recipes;
+      })
+      .subscribe((recipes: Recipe[]) => {
+        this.recipesService.setRecipes(recipes);
+      }
+    );
   }
 }
