@@ -21,6 +21,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeNewComponent } from './recipes/recipe-new/recipe-new.component';
 import {RecipesService} from "./recipes/recipes.service";
 import {DataStorageService} from "./shared/data-storage.service";
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import {DataStorageService} from "./shared/data-storage.service";
     MyTestComponent,
     NotFoundComponent,
     RecipeStartComponent,
-    RecipeNewComponent
+    RecipeNewComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     FormsModule,

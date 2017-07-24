@@ -8,6 +8,7 @@ import {NotFoundComponent} from "./not-found/not-found.component";
 import {RecipesDetailComponent} from "./recipes/recipes-detail/recipes-detail.component";
 import {RecipeStartComponent} from "./recipes/recipe-start/recipe-start.component";
 import {RecipeNewComponent} from "./recipes/recipe-new/recipe-new.component";
+import {SignupComponent} from "./auth/signup/signup.component";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
     { path: ':id/edit', component: RecipeNewComponent}
   ] },
   { path: 'shopping-list', component: ShoppingListComponent},
+  { path: 'signup', component: SignupComponent},
   { path: 'not-found', component: NotFoundComponent, data: {'message': 'Opps! Page not found!'}},
   { path: '**', redirectTo: 'not-found' }
 ]
