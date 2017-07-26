@@ -9,6 +9,7 @@ import {RecipesDetailComponent} from "./recipes/recipes-detail/recipes-detail.co
 import {RecipeStartComponent} from "./recipes/recipe-start/recipe-start.component";
 import {RecipeNewComponent} from "./recipes/recipe-new/recipe-new.component";
 import {SignupComponent} from "./auth/signup/signup.component";
+import {SigninComponent} from "./auth/signin/signin.component";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   ] },
   { path: 'shopping-list', component: ShoppingListComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'signin', component: SigninComponent},
   { path: 'not-found', component: NotFoundComponent, data: {'message': 'Opps! Page not found!'}},
   { path: '**', redirectTo: 'not-found' }
 ]
