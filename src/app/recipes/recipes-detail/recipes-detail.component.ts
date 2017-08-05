@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Recipe } from "app/recipes/recipe.model";
 import { RecipesService } from "app/recipes/recipes.service";
 import {ActivatedRoute, Params, Router} from "@angular/router";
+import {AuthService} from "../../auth/auth.service";
 
 @Component({
   selector: 'app-recipes-detail',
@@ -14,7 +15,8 @@ export class RecipesDetailComponent implements OnInit {
 
   constructor(private recipesService: RecipesService,
               private router: Router,
-              private route: ActivatedRoute
+              private route: ActivatedRoute,
+              private authService: AuthService
   ) { }
 
   ngOnInit() {
