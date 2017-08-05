@@ -10,14 +10,15 @@ import {RecipeStartComponent} from "./recipes/recipe-start/recipe-start.componen
 import {RecipeNewComponent} from "./recipes/recipe-new/recipe-new.component";
 import {SignupComponent} from "./auth/signup/signup.component";
 import {SigninComponent} from "./auth/signin/signin.component";
+import {AuthGuard} from "./auth/auth-guard.service";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
   { path: 'recipes', component: RecipesComponent, children: [
     { path: '', component: RecipeStartComponent},
-    { path: 'new', component: RecipeNewComponent},
+    { path: 'new', component: RecipeNewComponent, canActivate: [AuthGuard]},
     { path: ':id', component: RecipesDetailComponent},
-    { path: ':id/edit', component: RecipeNewComponent}
+    { path: ':id/edit', component: RecipeNewComponent, canActivate: [AuthGuard]}
   ] },
   { path: 'shopping-list', component: ShoppingListComponent},
   { path: 'signup', component: SignupComponent},
