@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { MyTestDirective } from "app/my-test/my-test.directive";
 import { MyTestComponent } from "app/my-test/my-test.component";
 import { ShoppingListService } from "app/shopping-list/shopping-list.service";
@@ -19,13 +17,12 @@ import {AuthGuard} from "./auth/auth-guard.service";
 import {RecipeModule} from "./recipes/recipes.module";
 import {SharedModule} from "./shared/shared.module";
 import {AuthModule} from "./auth/auth.module";
+import {ShoppingListModule} from "./shopping-list/shopping-list.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
     MyTestDirective,
     MyTestComponent,
     NotFoundComponent
@@ -37,6 +34,7 @@ import {AuthModule} from "./auth/auth.module";
     AppRoutingModule,
     RecipeModule,
     AuthModule,
+    ShoppingListModule,
     SharedModule
   ],
   providers: [ShoppingListService, RecipesService, DataStorageService, AuthService, AuthGuard],
