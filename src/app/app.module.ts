@@ -14,12 +14,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from "./app-routing.module";
 import {RecipesService} from "./recipes/recipes.service";
 import {DataStorageService} from "./shared/data-storage.service";
-import { SignupComponent } from './auth/signup/signup.component';
-import { SigninComponent } from './auth/signin/signin.component';
 import {AuthService} from "./auth/auth.service";
 import {AuthGuard} from "./auth/auth-guard.service";
 import {RecipeModule} from "./recipes/recipes.module";
 import {SharedModule} from "./shared/shared.module";
+import {AuthModule} from "./auth/auth.module";
 
 @NgModule({
   declarations: [
@@ -29,9 +28,7 @@ import {SharedModule} from "./shared/shared.module";
     ShoppingEditComponent,
     MyTestDirective,
     MyTestComponent,
-    NotFoundComponent,
-    SignupComponent,
-    SigninComponent
+    NotFoundComponent
   ],
   imports: [
     FormsModule,
@@ -39,6 +36,7 @@ import {SharedModule} from "./shared/shared.module";
     BrowserModule,
     AppRoutingModule,
     RecipeModule,
+    AuthModule,
     SharedModule
   ],
   providers: [ShoppingListService, RecipesService, DataStorageService, AuthService, AuthGuard],
