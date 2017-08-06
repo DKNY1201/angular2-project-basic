@@ -6,7 +6,6 @@ import { HeaderComponent } from './header/header.component';
 import { MyTestDirective } from "app/my-test/my-test.directive";
 import { MyTestComponent } from "app/my-test/my-test.component";
 import { ShoppingListService } from "app/shopping-list/shopping-list.service";
-import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from "./app-routing.module";
@@ -28,7 +27,6 @@ import {ShoppingListModule} from "./shopping-list/shopping-list.module";
     NotFoundComponent
   ],
   imports: [
-    FormsModule,
     HttpModule,
     BrowserModule,
     AppRoutingModule,

@@ -5,7 +5,8 @@ import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'recipes', pathMatch: 'full' }
+  { path: '', redirectTo: 'recipes', pathMatch: 'full' },
+  { path: 'shopping-list', component: ShoppingListComponent}
   // { path: 'not-found', component: NotFoundComponent, data: {'message': 'Opps! Page not found!'}},
   // { path: '**', redirectTo: 'not-found' }
 ]
