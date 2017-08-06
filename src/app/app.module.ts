@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { DropdownDirective } from 'app/shared/dropdown.directive';
 import { MyTestDirective } from "app/my-test/my-test.directive";
 import { MyTestComponent } from "app/my-test/my-test.component";
 import { ShoppingListService } from "app/shopping-list/shopping-list.service";
@@ -20,6 +19,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import {AuthService} from "./auth/auth.service";
 import {AuthGuard} from "./auth/auth-guard.service";
 import {RecipeModule} from "./recipes/recipes.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -27,7 +27,6 @@ import {RecipeModule} from "./recipes/recipes.module";
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    // DropdownDirective,
     MyTestDirective,
     MyTestComponent,
     NotFoundComponent,
@@ -39,7 +38,8 @@ import {RecipeModule} from "./recipes/recipes.module";
     HttpModule,
     BrowserModule,
     AppRoutingModule,
-    RecipeModule
+    RecipeModule,
+    SharedModule
   ],
   providers: [ShoppingListService, RecipesService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
