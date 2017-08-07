@@ -40,9 +40,9 @@ import {CoreModule} from "./core/core.module";
     // AuthModule,
     ShoppingListModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    FormsModule
   ],
-  providers: [ShoppingListService, RecipesService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,8 +8,8 @@ import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
-    SignupComponent,
-    SigninComponent
+    // SignupComponent,
+    // SigninComponent
   ],
   imports: [
     FormsModule,
